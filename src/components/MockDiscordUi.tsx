@@ -139,7 +139,7 @@ const MockDiscordUi = ({ children }: PropsWithChildren) => {
         </div>
 
         {/* message history */}
-        <div className="flex-1 overflow-y-auto p-4 bg-discord-background flex-col-reverse">
+        <div className="flex-1 overflow-y-auto p-4 bg-discord-background flex flex-col-reverse">
           {children}
         </div>
 

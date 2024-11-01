@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["var(--font-heading)", ...fontFamily.sans],
+        roboto: ["var(--font-roboto)"],
       },
       colors: {
         brand: {

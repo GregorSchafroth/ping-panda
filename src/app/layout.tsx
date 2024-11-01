@@ -1,16 +1,15 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import { Providers } from "@/components/Providers"
-import { EB_Garamond } from "next/font/google"
-import { cn } from "@/lib/utils"
-
-import "./globals.css"
 import { ClerkProvider } from "@clerk/nextjs"
+import type { Metadata } from "next"
+import { Roboto } from "next/font/google"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
-const eb_garamond = EB_Garamond({
-  subsets: ["latin"],
-  variable: "--font-heading",
+// Initialize Roboto font only
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-roboto',
 })
 
 export const metadata: Metadata = {
@@ -26,8 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={cn(inter.variable, eb_garamond.variable)}>
-        <body className="font-sans bg-brand-50 text-brand-950 antialiased">
+      <html lang="en" className={roboto.variable}>
+        <body className="font-roboto bg-brand-50 text-brand-950 antialiased">
           <Providers>{children}</Providers>
         </body>
       </html>
