@@ -26,8 +26,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={roboto.variable}>
-        <body className="font-roboto bg-brand-50 text-brand-950 antialiased">
+        <body className="min-h-screen flex flex-col font-roboto bg-brand-50 text-brand-950 antialiased">
+          <div className="relative flex-1 flex flex-col">
           <Providers>{children}</Providers>
+          </div>
         </body>
       </html>
     </ClerkProvider>
